@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUID_learning", "GUID_learn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_V8_Switch", "Csharp_V8_Switch\Csharp_V8_Switch.csproj", "{2CDECC28-6D27-4232-902D-2478AD79B953}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_V9_Record", "Csharp_V9_Record\Csharp_V9_Record.csproj", "{17A36B04-67C7-4CF1-A357-73B07C3DE689}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{2CDECC28-6D27-4232-902D-2478AD79B953}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CDECC28-6D27-4232-902D-2478AD79B953}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CDECC28-6D27-4232-902D-2478AD79B953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17A36B04-67C7-4CF1-A357-73B07C3DE689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A36B04-67C7-4CF1-A357-73B07C3DE689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A36B04-67C7-4CF1-A357-73B07C3DE689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17A36B04-67C7-4CF1-A357-73B07C3DE689}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
