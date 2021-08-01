@@ -12,10 +12,10 @@ namespace Csharp_V8_Switch
 {
     internal class Program
     {
-      
+
         public class TollCalculator
         {
-
+   
             public static bool IsWeekDay(DateTime timeOfToll) => timeOfToll.DayOfWeek switch
             {
                 DayOfWeek.Saturday => false,
@@ -146,6 +146,19 @@ namespace Csharp_V8_Switch
 
         public static void Main(string[] args)
         {
+            
+            var numbers = new int[] { 10, 20, 30, 40, 50, 60, 70 };
+            Console.WriteLine(GetSourceLabel(numbers));  // output: 1
+
+            var letters = new List<char> { 'a', 'b', 'c', 'd' };
+            Console.WriteLine(GetSourceLabel(letters));  // output: 2
+
+            static int GetSourceLabel<T>(IEnumerable<T> source) => source switch
+            {
+                Array array => 1,
+                ICollection<T> collection => 2,
+                _ => 3,
+            };
         //   First set of test code
             //var tollCalc = new TollCalculator();
 

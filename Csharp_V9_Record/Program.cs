@@ -73,6 +73,7 @@ namespace Csharp_V9_Record
         };  
         public static void Main(string[] args)
         {
+
             
             foreach (var item in data)
                 Console.WriteLine(item);
@@ -87,6 +88,8 @@ namespace Csharp_V9_Record
 
             var growingDegreeDays = coolingDegreeDays with { BaseTemperature = 41 };
             Console.WriteLine(growingDegreeDays);
+            
+            
         }
     }
 }
