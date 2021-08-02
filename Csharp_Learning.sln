@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_V9_Record", "Csharp_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_V7_Is", "Csharp_V7_Is\Csharp_V7_Is.csproj", "{F30BC569-8BF4-470A-B622-332DAE2CEB2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_V7_Tuple", "Csharp_V7_Tuple\Csharp_V7_Tuple.csproj", "{5D65E7FD-229A-4041-BC0C-F83BF7FC14DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_V7_Discard", "Csharp_V7_Discard\Csharp_V7_Discard.csproj", "{6DB00100-9FBA-49B4-81BB-3F1D7E2AA58B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{F30BC569-8BF4-470A-B622-332DAE2CEB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F30BC569-8BF4-470A-B622-332DAE2CEB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F30BC569-8BF4-470A-B622-332DAE2CEB2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D65E7FD-229A-4041-BC0C-F83BF7FC14DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D65E7FD-229A-4041-BC0C-F83BF7FC14DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D65E7FD-229A-4041-BC0C-F83BF7FC14DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D65E7FD-229A-4041-BC0C-F83BF7FC14DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DB00100-9FBA-49B4-81BB-3F1D7E2AA58B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB00100-9FBA-49B4-81BB-3F1D7E2AA58B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB00100-9FBA-49B4-81BB-3F1D7E2AA58B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB00100-9FBA-49B4-81BB-3F1D7E2AA58B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
