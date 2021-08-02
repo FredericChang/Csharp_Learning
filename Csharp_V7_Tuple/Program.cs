@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace Csharp_V7_Tuple
 {
-    internal class Program
+    class Program
     {
         public static void Main(string[] args)
         {
@@ -28,6 +29,20 @@ namespace Csharp_V7_Tuple
             var (minimum, maximum) = FindMinMax(ys);
             Console.WriteLine($"Limits of [{string.Join(" ", ys)}] are {minimum} and {maximum}");
 
+            //Tuples as out parameters
+
+            var limitsLookup = new Dictionary<int, (int Min, int Max)>()
+            {
+                [2] = (4, 10),
+                [4] = (10, 20),
+                [6] = (0, 23),
+                [8] = (11, 23)
+            };
+
+            if (limitsLookup.TryGetValue(4, out (int Min, int Max) limits2))
+            {
+                Console.WriteLine($"Found limits: min is {limits2.Min}, max is {limits2.Max}");
+            }
             
             (int min, int max) FindMinMax(int[] input)
             {
