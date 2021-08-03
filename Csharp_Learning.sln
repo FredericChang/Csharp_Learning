@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_V7_Tuple", "Csharp_V
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_V7_Discard", "Csharp_V7_Discard\Csharp_V7_Discard.csproj", "{6DB00100-9FBA-49B4-81BB-3F1D7E2AA58B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_V8_Interface", "Csharp_V8_Interface\Csharp_V8_Interface.csproj", "{2D0EB9D4-6704-4AD0-885D-3CE597A9E3B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{6DB00100-9FBA-49B4-81BB-3F1D7E2AA58B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DB00100-9FBA-49B4-81BB-3F1D7E2AA58B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DB00100-9FBA-49B4-81BB-3F1D7E2AA58B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D0EB9D4-6704-4AD0-885D-3CE597A9E3B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D0EB9D4-6704-4AD0-885D-3CE597A9E3B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D0EB9D4-6704-4AD0-885D-3CE597A9E3B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D0EB9D4-6704-4AD0-885D-3CE597A9E3B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
