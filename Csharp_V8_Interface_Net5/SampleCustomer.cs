@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-namespace Csharp_V8_Interface
+namespace Csharp_V8_Interface_Net5
 {
     public class SampleCustomer : ICustomer
     {
@@ -29,5 +31,13 @@ namespace Csharp_V8_Interface
         }
 
         // <SnippetOverrideAndExtend>
+        public decimal ComputeLoyaltyDiscount()
+        {
+            if (PreviousOrders.Any() == false)
+                return 0.50m;
+            else
+                return ICustomer.DefaultLoyaltyDiscount(this);
+        }
+        // </SnippetOverrideAndExtend>
     }
 }
