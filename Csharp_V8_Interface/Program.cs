@@ -15,7 +15,6 @@ namespace Csharp_V8_Interface
                     { new DateTime(2020, 8, 26), "Birth2"}
                 }
             };
-            
             SampleOrder o = new SampleOrder(new DateTime(2020, 9, 22), 5m);
             c.AddOrder(o);
             o = new SampleOrder(new DateTime(2020, 9, 23), 25m);
