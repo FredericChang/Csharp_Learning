@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxConsecutiveOnes", "MaxCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindNumberswithEvenNumberofDigits", "FindNumberswithEvenNumberofDigits\FindNumberswithEvenNumberofDigits.csproj", "{93414D17-5DA7-47CB-A91A-FED7CF82415D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquaresofaSortedArray", "SquaresofaSortedArray\SquaresofaSortedArray.csproj", "{8D4B701B-D7C9-4F0D-A00D-F4267A822ABD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,9 +70,14 @@ Global
 		{93414D17-5DA7-47CB-A91A-FED7CF82415D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93414D17-5DA7-47CB-A91A-FED7CF82415D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93414D17-5DA7-47CB-A91A-FED7CF82415D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D4B701B-D7C9-4F0D-A00D-F4267A822ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D4B701B-D7C9-4F0D-A00D-F4267A822ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D4B701B-D7C9-4F0D-A00D-F4267A822ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D4B701B-D7C9-4F0D-A00D-F4267A822ABD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{875D0BAF-798C-41B7-8D65-52F4DDA01F92} = {B28F2AB4-FB17-4C16-9D6C-757D04B6A68E}
 		{93414D17-5DA7-47CB-A91A-FED7CF82415D} = {B28F2AB4-FB17-4C16-9D6C-757D04B6A68E}
+		{8D4B701B-D7C9-4F0D-A00D-F4267A822ABD} = {B28F2AB4-FB17-4C16-9D6C-757D04B6A68E}
 	EndGlobalSection
 EndGlobal
