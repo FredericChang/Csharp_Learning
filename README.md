@@ -20,3 +20,5 @@ https://github.com/TheAlgorithms/C-Sharp
 
 *[Github/Link](https://github.com/TheAlgorithms/C-Sharp)
 
+*[Github/Zero2Hero](https://github.com/csinn/CSharp-From-Zero-To-Hero)
+

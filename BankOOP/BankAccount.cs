@@ -15,19 +15,25 @@ namespace BankOOP
                 {
                     balance += item.Amount;
                 }
-
                 return balance;
             }
         }
         private static int accountNumberSeed = 1234567890;
+        
+        private readonly decimal minimumBalance;
+        
         private List<Transaction> allTransactions = new List<Transaction>();
-        public BankAccount(string name, decimal initialBalance)
+        public BankAccount(string name, decimal initialBalance) : this(name, initialBalance, 0) { }
+        //TODO: to check this area
+        public BankAccount(string name, decimal initialBalance, decimal minimumBalance)
         {
-            this.Owner = name;
-            
-            MakeDeposit(initialBalance, DateTime.Now, "Initial balance", Guid.NewGuid());
             this.Number = accountNumberSeed.ToString();
             accountNumberSeed++;
+
+            this.Owner = name;
+            this.minimumBalance = minimumBalance;
+            if (initialBalance > 0)
+                MakeDeposit(initialBalance, DateTime.Now, "Initial balance",Guid.NewGuid());
         }
         
         public void MakeDeposit(decimal amount, DateTime date, string note, Guid guid)
@@ -35,6 +41,7 @@ namespace BankOOP
             if (amount <= 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(amount), "Amount of deposit must be positive");
+                //IndexOutOfRangeException 不是最適當的例外狀況：對 ArgumentOutOfRangeException 方法來說更有意義，因為錯誤是由 index 呼叫者傳入的引數所造成。
             }
 
             var deposit = new Transaction(amount, date, note, guid);
@@ -53,8 +60,11 @@ namespace BankOOP
                 throw new InvalidOperationException("Not sufficient funds for this withdrawal");
             }
 
+            var overdraftTransaction = CheckWithdrawalLimit(Balance - amount < minimumBalance);
             var withdrawal = new Transaction(-amount, date, note, guid);
             allTransactions.Add(withdrawal);
+            if (overdraftTransaction != null)
+                allTransactions.Add(overdraftTransaction);
         }
 
         public string GetAccountHistory()
@@ -70,6 +80,20 @@ namespace BankOOP
             }
             return report.ToString();
         }
+
+        //Transaction? <= Net 8.0
+        protected virtual Transaction? CheckWithdrawalLimit(bool isOverdrawn)
+        {
+            if (isOverdrawn)
+            {
+                throw new InvalidOperationException("Not sufficient funds for this withdrawal");
+            }
+            else
+            {
+                return default;
+            }
+        }
+        public virtual void PerformMonthEndTransactions() { }
 
     }
 }
