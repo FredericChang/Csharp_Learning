@@ -54,17 +54,26 @@ namespace BankOOP
             {
                 throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdrawal must be positive");
             }
-
-            if (Balance - amount < 0)
-            {
-                throw new InvalidOperationException("Not sufficient funds for this withdrawal");
-            }
-
             var overdraftTransaction = CheckWithdrawalLimit(Balance - amount < minimumBalance);
-            var withdrawal = new Transaction(-amount, date, note, guid);
+            var withdrawal = new Transaction(-amount, date, note, Guid.NewGuid());
             allTransactions.Add(withdrawal);
             if (overdraftTransaction != null)
                 allTransactions.Add(overdraftTransaction);
+            // if (amount <= 0)
+            // {
+            //     throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdrawal must be positive");
+            // }
+            //
+            // if (Balance - amount < 0)
+            // {
+            //     throw new InvalidOperationException("Not sufficient funds for this withdrawal");
+            // }
+            //
+            // var overdraftTransaction = CheckWithdrawalLimit(Balance - amount < minimumBalance);
+            // var withdrawal = new Transaction(-amount, date, note, guid);
+            // allTransactions.Add(withdrawal);
+            // if (overdraftTransaction != null)
+            //     allTransactions.Add(overdraftTransaction);
         }
 
         public string GetAccountHistory()

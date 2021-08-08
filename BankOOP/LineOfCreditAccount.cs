@@ -22,6 +22,11 @@ namespace BankOOP
             }
         }
         
+        protected override Transaction? CheckWithdrawalLimit(bool isOverdrawn) =>
+            isOverdrawn
+                ? new Transaction(-20, DateTime.Now, "Apply overdraft fee",Guid.NewGuid())
+                : default;
+        
         
         //可以有負數餘額，但絕對值不能大於點數限制。
         //每個月都會產生利息費，而月底餘額不是0。
