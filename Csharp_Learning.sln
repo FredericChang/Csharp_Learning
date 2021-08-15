@@ -38,6 +38,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Object", "Object", "{0BC7A4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankOOP", "BankOOP\BankOOP.csproj", "{4766F0A3-2A79-4B8B-AE26-170FCDA5FD48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_V_AsyncEnumerables", "Csharp_V_AsyncEnumerables\Csharp_V_AsyncEnumerables.csproj", "{036EF12B-4DCC-419D-8F72-C18DDE6620BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,10 @@ Global
 		{4766F0A3-2A79-4B8B-AE26-170FCDA5FD48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4766F0A3-2A79-4B8B-AE26-170FCDA5FD48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4766F0A3-2A79-4B8B-AE26-170FCDA5FD48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{036EF12B-4DCC-419D-8F72-C18DDE6620BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{036EF12B-4DCC-419D-8F72-C18DDE6620BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{036EF12B-4DCC-419D-8F72-C18DDE6620BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{036EF12B-4DCC-419D-8F72-C18DDE6620BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{875D0BAF-798C-41B7-8D65-52F4DDA01F92} = {B28F2AB4-FB17-4C16-9D6C-757D04B6A68E}
