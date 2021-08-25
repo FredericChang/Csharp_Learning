@@ -47,6 +47,25 @@ namespace LINQ_Basic
             
             int scoreCount2 = scoreQuery.Count();
             Console.WriteLine("ScoreCount = " + scoreCount2);
+
+            List<Teacher> teachers = new List<Teacher>
+            {
+                new Teacher {LastName="A", scores = new List<int>{97,79,61,16}},
+                new Teacher {LastName="B", scores = new List<int>{81,88,77,0}},
+                new Teacher {LastName="C", scores = new List<int>{55,79,77,16}},
+                new Teacher {LastName="D", scores = new List<int>{97,66,61,88}},
+            };
+
+            var scoreQueryTest =
+                from teacher in teachers
+                from score in teacher.scores
+                where score > 90
+                select new {Last = teacher.LastName, score};
+            Console.WriteLine("print Scores");
+            foreach (var teacher in scoreQueryTest)
+            {
+                Console.WriteLine("{0} Score: {1}", teacher.Last, teacher.score);
+            }
             
         }
         
