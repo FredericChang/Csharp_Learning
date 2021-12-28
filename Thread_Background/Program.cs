@@ -10,7 +10,6 @@ namespace Thread_Background
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
             // FileStream fs = new FileStream("Test.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
             // // First, save the standard output.
             // TextWriter tmp = Console.Out;
