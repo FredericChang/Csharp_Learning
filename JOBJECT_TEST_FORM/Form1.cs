@@ -16,8 +16,16 @@ namespace JOBJECT_TEST_FORM
         public Form1()
         {
             InitializeComponent();
+
+            List<string> validCommands = new List<string>()
+            {
+                "LCTest:ConFigure:TIme:CHG",
+            };
+            var command = "LCTest:ConFigure:TIme:CHG MAX";
             
-   
+
+            string matchedCommand = validCommands.FirstOrDefault(c => command.StartsWith(c));
+
             
             
             

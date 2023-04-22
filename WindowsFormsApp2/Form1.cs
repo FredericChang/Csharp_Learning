@@ -30,7 +30,7 @@ namespace WindowsFormsApp2
             // Define a list of valid commands that the server can handle
             
             //get local folder called JSON to read the json files name and store in a list
-            string[] files = Directory.GetFiles(@"C:\Users\Public\Documents\Chroma 11210 TCP Listener\", "*.json");
+            string[] files = Directory.GetFiles(@"C:\Users\31629\source\repos\Chroma 11210 TCP Listener\Chroma 11210 TCP Listener\JSON\", "*.json");
             List<string> validCommands = new List<string>();
             
             // Loop through the files and add the file name without the extension to the list
@@ -41,6 +41,7 @@ namespace WindowsFormsApp2
                 a = a.Replace("_", ":");
                 validCommands.Add(a);
             }
+            string[] subs = command.Split(' ');
             
             
             // Check if the command is valid
@@ -68,7 +69,7 @@ namespace WindowsFormsApp2
 
                 // Create a new file name
                 string newFileName = matchedCommand;
-                newFileName = newFileName.Replace(":", "");
+                newFileName = newFileName.Replace(":", "_");
                 newFileName+= ".json";
             
                 string directoryPath = Path.GetDirectoryName(filePath);
@@ -89,17 +90,19 @@ namespace WindowsFormsApp2
 
                     
                     // Check if the command ends with a question mark
-                    if (matchedCommand.EndsWith("?"))
+                    if (command.EndsWith("?"))
                     {
                         // Handle the command with a question mark
-                    
+                        JToken setCommandToken = o["LCTestCONFigureTIMECHG"]?["ReturnData"];
+                        Console.WriteLine(setCommandToken);
+                        textBox2.Text = setCommandToken.ToString();
                     
                     }
                     // Check if the command ends with "MAX"
-                    else if (matchedCommand.EndsWith("MAX"))
+                    else if (command.EndsWith("MAX"))
                     {
-                        double resolutionParameter = (double)o["LCTestCONFigureTIMECHG"]["maxParameter"];
-                        JToken setCommandToken = o["LCTestCONFigureTIMECHG"]?["ReturnValue"];
+                        double resolutionParameter = (double)o["LCTestCONFigureTIMECHG"]["MaxParameter"];
+                        JToken setCommandToken = o["LCTestCONFigureTIMECHG"]?["ReturnData"];
                         if (setCommandToken != null && setCommandToken.Type == JTokenType.Float)
                         {
                             setCommandToken.Replace(resolutionParameter);
@@ -109,10 +112,10 @@ namespace WindowsFormsApp2
                         // Handle the command with "MAX"
                     }
                     // Check if the command ends with "MIN"
-                    else if (matchedCommand.EndsWith("MIN"))
+                    else if (command.EndsWith("MIN"))
                     {
-                        double resolutionParameter = (double)o["LCTestCONFigureTIMECHG"]["minParameter"];
-                        JToken setCommandToken = o["LCTestCONFigureTIMECHG"]?["ReturnValue"];
+                        double resolutionParameter = (double)o["LCTestCONFigureTIMECHG"]["MinParameter"];
+                        JToken setCommandToken = o["LCTestCONFigureTIMECHG"]?["ReturnData"];
                         if (setCommandToken != null && setCommandToken.Type == JTokenType.Float)
                         {
                             setCommandToken.Replace(resolutionParameter);
@@ -125,34 +128,25 @@ namespace WindowsFormsApp2
                         // Handle the command without any special ending
                         // string setCommand = (string)root["LCTest:CONFigure:TIME:CHG"]["SetCommand"];
                         // double resolutionParameter = (double)root["LCTest:CONFigure:TIME:CHG"]["ResolutionParameter"];
-                        //
-                        
                         // Overwrite the value of the "SetCommand" node
-                        JToken setCommandToken = o["LCTestCONFigureTIMECHG"]?["ReturnValue"];
-
+                        JToken setCommandToken = o["LCTestCONFigureTIMECHG"]?["ReturnData"];
+                        
                         if (setCommandToken != null && setCommandToken.Type == JTokenType.Float)
                         {
-                            setCommandToken.Replace(40.0);
+                            double value = double.Parse(subs[1]);
+                            setCommandToken.Replace(value);
                         }
             
                         File.WriteAllText(newFilePath, o.ToString());
                     
                     }
-                    
-                    
-                    
-                    
+
                 }
                 else
                 {
                     // File does not exist, do something else
                 }
-
-
-                
-                
-                
-                                    
+        
             }
             
             else
